@@ -1,5 +1,6 @@
 package masukura.opst.co.jp.studyproject;
 
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,6 +8,7 @@ import android.widget.Toast;
 import android.view.View;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.app.AlertDialog;
 
 public class MainActivity extends AppCompatActivity {
 	@Override
@@ -30,7 +32,16 @@ public class MainActivity extends AppCompatActivity {
 		button1.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				if (view == button1) {
-					finishAndRemoveTask();
+					new AlertDialog.Builder(MainActivity.this)
+							.setMessage("アプリを終了しますか？")
+							.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog, int i) {
+									finishAndRemoveTask();
+								}
+							})
+							.setNegativeButton("No", null)
+							.show();
 				}
 			}
 		});
