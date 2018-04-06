@@ -1,4 +1,4 @@
-package masukura.opst.co.jp.studyproject;
+package com.example.harumi_pcmac.myapplication;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -16,11 +16,11 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
-	@Test
-	public void useAppContext() throws Exception {
-		// Context of the app under test.
-		Context appContext = InstrumentationRegistry.getTargetContext();
+    @Test
+    public void useAppContext() {
+        // Context of the app under test.
+        Context appContext = InstrumentationRegistry.getTargetContext();
 
-		assertEquals("masukura.opst.co.jp.studyproject", appContext.getPackageName());
-	}
+        assertEquals("com.example.harumi_pcmac.myapplication", appContext.getPackageName());
+    }
 }
