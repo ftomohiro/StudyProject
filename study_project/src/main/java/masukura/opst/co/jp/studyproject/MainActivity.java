@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		final Button button1 = (Button) findViewById(R.id.button1);
+		final Button button2 = (Button) findViewById(R.id.button2);
 
 		button1.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
@@ -21,6 +22,16 @@ public class MainActivity extends AppCompatActivity {
 					Toast toast1 = Toast.makeText(MainActivity.this, "ボタン1を押下しました", Toast.LENGTH_SHORT);
 					toast1.setGravity(Gravity.CENTER, 0, -200);
 					toast1.show();
+				}
+			}
+		});
+
+		button2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View view) {
+				if (view == button2) {
+					Toast toast2 = Toast.makeText(MainActivity.this, "ボタン2を押下しました", Toast.LENGTH_SHORT);
+					toast2.setGravity(Gravity.CENTER, 0, -200);
+					toast2.show();
 				}
 			}
 		});
