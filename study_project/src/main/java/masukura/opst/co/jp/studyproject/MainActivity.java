@@ -35,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
 		final Button button1 = (Button) findViewById(R.id.button1);
 		final Button button2 = (Button) findViewById(R.id.button2);
 
+		MainFragment fragment = new MainFragment();
+		FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+		transaction.replace(R.id.container, fragment.createInstance("fragment1", Color.GREEN));
+
+		transaction.commit();
+
 		button1.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				if (view == button1) {
@@ -55,19 +62,14 @@ public class MainActivity extends AppCompatActivity {
 		button2.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View view) {
 				if (view == button2) {
-					Toast toast2 = Toast.makeText(MainActivity.this, "ボタン2を押下しました", Toast.LENGTH_SHORT);
-					toast2.setGravity(Gravity.CENTER, 0, -200);
-					toast2.show();
+					MainFragment2 fragment2 = new MainFragment2();
+					FragmentTransaction transaction2 = getFragmentManager().beginTransaction();
+
+					transaction2.replace(R.id.container, fragment2.createInstance("fragment2", Color.BLUE));
+
+					transaction2.commit();
 				}
 			}
 		});
-
-		MainFragment fragment = new MainFragment();
-		FragmentTransaction transaction = getFragmentManager().beginTransaction();
-
-		transaction.replace(R.id.container1, fragment.createInstance("fragment1", Color.GREEN));
-
-		transaction.commit();
-
 	}
 }

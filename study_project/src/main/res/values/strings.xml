@@ -3,5 +3,6 @@
     <string name="button1">アプリ終了</string>
     <string name="button2">Button 2</string>
     <string name="textView1">Fragment1</string>
+    <string name="textView2">Fragment2</string>
     <string name="button">Button</string>
 </resources>

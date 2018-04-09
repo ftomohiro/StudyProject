@@ -22,9 +22,11 @@
         android:text="@string/button2" />
 
     <LinearLayout
-        android:id="@+id/container1"
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
+
+    </LinearLayout>
 
 </FrameLayout>
